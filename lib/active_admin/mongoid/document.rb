@@ -8,9 +8,9 @@ module ActiveAdmin::Mongoid::Document
   # INSTANCE METHODS
 
   # Returns the column object for the named attribute.
-  def column_for_attribute(name)
-    self.class.columns_hash[name.to_s]
-  end
+  # def column_for_attribute(name)
+  #   self.class.columns_hash[name.to_s]
+  # end
 
 
 
