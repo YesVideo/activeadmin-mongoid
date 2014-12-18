@@ -22,7 +22,7 @@ module MetaSearch
           when :does_not_equal, :ne, :not_eq
             @relation = relation.where(field.to_sym.ne => value)
           when :contains, :like, :matches
-            @relation = relation.where(field => /#{value}/)
+            @relation = relation.where(field => /#{value}/i)
           when :does_not_contain, :nlike, :not_matches
             @relation = relation.where(field.to_sym.not => /#{value}/)
           when :starts_with, :sw
